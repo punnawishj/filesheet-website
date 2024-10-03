@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filesheet - Summary Sheets for Students</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Filesheet</h1>
+        <p>Your source for summary sheets from high school to university!</p>
+    </header>
+
+    <section class="sample-section">
+        <h2>Download Free Samples</h2>
+        <p>Try a preview before purchasing!</p>
+        <a href="assets/sample-mathematics.pdf" download class="btn">Download Sample (Mathematics)</a>
+        <a href="assets/sample-thermodynamics.pdf" download class="btn">Download Sample (Thermodynamics)</a>
+    </section>
+
+    <section class="payment-section">
+        <h2>Pay via QR Code</h2>
+        <p>Use mobile banking to complete your purchase. Scan the code below:</p>
+        <img src="assets/qr-code.png" alt="QR Code for Payment">
+    </section>
+
+    <section class="blurred-sheet-section">
+        <h2>Full Sheet Preview</h2>
+        <div class="blurred-sheet">
+            <img src="assets/blurred-sheet.png" alt="Blurred Sheet">
+        </div>
+        <div class="preview">
+            <img src="assets/first-page-preview.png" alt="Preview of First Page">
+        </div>
+    </section>
+
+    <section class="classroom-section">
+        <h2>Online Classroom</h2>
+        <p>Join our upcoming live classes:</p>
+        <ul>
+            <li>Mathematics: October 5th, 3:00 PM - <a href="https://meet.google.com" class="btn">Join Now</a></li>
+            <li>Thermodynamics: October 7th, 1:00 PM - <a href="https://meet.google.com" class="btn">Join Now</a></li>
+        </ul>
+    </section>
+
+    <section class="vdo-call-section">
+        <h2>1-on-1 Tutoring Sessions</h2>
+        <form action="schedule.php" method="POST">
+            <label for="subject">Choose Subject:</label>
+            <select id="subject" name="subject">
+                <option value="mathematics">Mathematics</option>
+                <option value="thermodynamics">Thermodynamics</option>
+            </select>
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date">
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time">
+            <input type="submit" value="Book Now" class="btn">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Filesheet. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

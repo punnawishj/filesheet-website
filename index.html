@@ -1,63 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filesheet - Summary Sheets for Students</title>
+    <title>Filesheet - Your Study Companion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#samples">Download Samples</a></li>
+                <li><a href="#payment">Pay by QR</a></li>
+                <li><a href="#classroom">Online Classroom</a></li>
+                <li><a href="#booking">1-on-1 Booking</a></li>
+            </ul>
+        </nav>
         <h1>Filesheet</h1>
-        <p>Your source for summary sheets from high school to university!</p>
+        <p>The best way to access summarized study materials for students.</p>
     </header>
 
-    <section class="sample-section">
-        <h2>Download Free Samples</h2>
-        <p>Try a preview before purchasing!</p>
-        <a href="assets/sample-mathematics.pdf" download class="btn">Download Sample (Mathematics)</a>
-        <a href="assets/sample-thermodynamics.pdf" download class="btn">Download Sample (Thermodynamics)</a>
+    <!-- Download Sample Section -->
+    <section id="samples">
+        <h2>Free Samples</h2>
+        <p>Try a preview before purchasing the full summaries:</p>
+        <div class="sample-links">
+            <a href="assets/sample-mathematics.pdf" download class="btn">Mathematics Sample</a>
+            <a href="assets/sample-thermodynamics.pdf" download class="btn">Thermodynamics Sample</a>
+        </div>
     </section>
 
-    <section class="payment-section">
+    <!-- Payment Section -->
+    <section id="payment">
         <h2>Pay via QR Code</h2>
-        <p>Use mobile banking to complete your purchase. Scan the code below:</p>
-        <img src="assets/qr-code.png" alt="QR Code for Payment">
+        <p>Scan the QR code with your banking app to complete the purchase:</p>
+        <img src="assets/qr-code.png" alt="QR Code Payment" class="qr-code">
     </section>
 
-    <section class="blurred-sheet-section">
+    <!-- Blurred Preview Section -->
+    <section id="blur-preview">
         <h2>Full Sheet Preview</h2>
+        <p>Only a part of the first page is visible. Purchase to unlock the full content:</p>
         <div class="blurred-sheet">
-            <img src="assets/blurred-sheet.png" alt="Blurred Sheet">
-        </div>
-        <div class="preview">
-            <img src="assets/first-page-preview.png" alt="Preview of First Page">
+            <img src="assets/blurred-sheet.png" alt="Blurred Full Sheet">
+            <img src="assets/first-page-preview.png" alt="First Page Preview">
         </div>
     </section>
 
-    <section class="classroom-section">
-        <h2>Online Classroom</h2>
-        <p>Join our upcoming live classes:</p>
+    <!-- Online Classroom Section -->
+    <section id="classroom">
+        <h2>Join Online Classroom</h2>
+        <p>Attend live classes via Google Meet. Upcoming sessions:</p>
         <ul>
-            <li>Mathematics: October 5th, 3:00 PM - <a href="https://meet.google.com" class="btn">Join Now</a></li>
-            <li>Thermodynamics: October 7th, 1:00 PM - <a href="https://meet.google.com" class="btn">Join Now</a></li>
+            <li>Mathematics - October 5, 3:00 PM <a href="https://meet.google.com" target="_blank" class="btn">Join Now</a></li>
+            <li>Thermodynamics - October 7, 1:00 PM <a href="https://meet.google.com" target="_blank" class="btn">Join Now</a></li>
         </ul>
     </section>
 
-    <section class="vdo-call-section">
+    <!-- Booking Section -->
+    <section id="booking">
         <h2>1-on-1 Tutoring Sessions</h2>
-        <form action="schedule.php" method="POST">
+        <form action="https://formspree.io/f/your-email" method="POST">
             <label for="subject">Choose Subject:</label>
             <select id="subject" name="subject">
                 <option value="mathematics">Mathematics</option>
                 <option value="thermodynamics">Thermodynamics</option>
             </select>
+            
             <label for="date">Preferred Date:</label>
-            <input type="date" id="date" name="date">
+            <input type="date" id="date" name="date" required>
+            
             <label for="time">Preferred Time:</label>
-            <input type="time" id="time" name="time">
+            <input type="time" id="time" name="time" required>
+            
             <input type="submit" value="Book Now" class="btn">
         </form>
     </section>
